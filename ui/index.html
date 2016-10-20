@@ -5,14 +5,62 @@
     </head>
     <body>
         <div class="center">
-            <img src="/ui/madi.png" class="img-medium"/>
+           <! <img src="/ui/madi.png" class="img-medium"/>>
         </div>
         <br>
+        
         <div class="center text-big bold">
-            Hi! I am your webapp.
-            <h3>I am new to this culture,help me</h3>
-        </div>
-        <script type="text/javascript" src="/ui/main.js">
-        </script>
+            Hi! Lets purify the Air around you.
+            
+         </div>
+            </br></br></br></br>
+              <center><button type="button" id ="bclick"  >Lets breathe happily!</button>  </center><br>
+              
+           
+             <center>  <span id ="counter"></span>   </center>
+             
+             <script type = "text/javascript" src="/ui/main.js"></script> 
+            
+ 
+        <!--
+        <script >  
+        	document.getElementById("bclick").addEventListener("click", myFunction);
+        	 var temp=0,hum=0,pre=0,avgTemp,avgHum,avgPre;
+        	 var i=0;
+        	 var deviceId = D1;
+		function myFunction() 
+		{
+		 
+		    document.getElementById("bclick").disabled = true;
+		    setInterval(function(){  
+		    
+		        	temp = temp + Math.floor((Math.random() * 100) + 1);
+				hum = hum + Math.floor((Math.random() * 100) + 1);
+				pre = pre + Math.floor((Math.random() * 100) + 1);
+				i = i+1;
+				if(i%10 == 0)
+				{
+					avgTemp = temp/60;
+					avgHum = hum/60;
+					avgPre = pre/60;
+					alert('Temp = ' + avgTemp +'\n'+ 'Humid = ' + avgHum +'\n' +  'Pre = '+ avgTemp); 
+					temp = 0;
+					hum = 0;
+					pre = 0;
+					
+				}
+				
+		                 
+		     }, 1000);
+		    
+	
+		}
+		 
+		
+	 </script>
+	 
+	 -->
+	 
+	 
     </body>
 </html>
