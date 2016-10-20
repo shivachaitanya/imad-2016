@@ -51,6 +51,46 @@ con.query('CREATE TABLE IF NOT EXISTS ?? (timestamp int(10) AUTO_INCREMENT, pre 
 
 
 
+app.get('/clientData', function (req, res) {
+var clientNo = req.query.name;
+   var con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "1",
+  database : "airok"
+  
+});
+ con.connect(function(err){
+  if(err){
+    res.send('Error connecting to Db');
+    return;
+  }
+   res.send("Connection established");
+});
+
+   var clientNo = req.query.name;
+   var pre = req.query.pre;
+   var hum = req.query.hum;
+   var temp = req.query.temp;
+  var data = { pre: pre, humid: hum,temp:temp };
+var q = ('INSERT INTO '.concat(clientNo)).concat(' SET ?');
+con.query(q,data, function(err,res){
+  if(err) throw err;
+  
+  console.log('Last insert ID:', res.insertId);
+});
+
+
+
+
+});
+
+
+
+
+
+
+
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
